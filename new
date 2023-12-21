@@ -1,0 +1,12 @@
+tars: TARSClassifier = TARSClassifier.load('tars-base')
+
+# the sentence for classification
+sentence = Sentence("The 2020 United States presidential election was the 59th quadrennial presidential election, held on Tuesday, November 3, 2020")
+
+classes = ["sports", "politics", "science", "art"]
+
+# predict the class of the sentence
+tars.predict_zero_shot(sentence, classes)
+
+# Print sentence with predicted labels
+print("\n",sentence)
